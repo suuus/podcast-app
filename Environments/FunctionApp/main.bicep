@@ -5,7 +5,7 @@
 param name string
 
 @description('Location to deploy the environment resources')
-param location string = resourceGroup().location
+param location string = 'eastus'
 
 @description('Allows https traffic only to Storage Account and Functions App if set to true.')
 param supportsHttpsTrafficOnly bool = true
