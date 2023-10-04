@@ -19,7 +19,7 @@
     }
   },
   "variables": {
-    "appServicePlanPortalName": "[format('AppServicePlan-{0}', parameters('name'))]"
+    "appServicePlanPortalName": "[format('AppServicePlan-{0}-{1}', parameters('name'),uniqueString(resourceGroup().id)]"
   },
   "resources": [
     {
@@ -39,6 +39,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2021-02-01",
       "name": "[parameters('name')]",
+      "name": "[format('webApp-{0}-{1}', parameters('name'), uniqueString(resourceGroup().id))]"
       "location": "eastus",
       "properties": {
         "httpsOnly": true,
