@@ -75,6 +75,6 @@ jobs:
 
       - name: Deploy Podcast App
         run: |         
-          az webapp deploy --name ${{ env.ENVIRONMENT_NAME }} --type zip --src-path publish.zip --subscription ${{ env.ENVIRONMENT_SUB }} --resource-group ${{ env.ENVIRONMENT_GROUP }}
+          az webapp deploy --name 'webapp-${{ env.ENVIRONMENT_NAME }}' --type zip --src-path publish.zip --subscription ${{ env.ENVIRONMENT_SUB }} --resource-group ${{ env.ENVIRONMENT_GROUP }}
 
           echo "- [View the deployed API](https://${{ env.ENVIRONMENT_NAME }}.azurewebsites.net/api/time)" >> $GITHUB_STEP_SUMMARY
