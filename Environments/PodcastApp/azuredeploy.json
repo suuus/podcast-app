@@ -51,7 +51,10 @@
         "virtualNetworkSubnetId": null,
         "httpsOnly": true,
         "publicNetworkAccess": "Enabled"
-      }
+      },
+      "dependsOn": [ 
+        "[resourceId('Microsoft.Web/serverfarms', pvariables('appServicePlanPortalName'))]"
+       ]
     }
   ]
 }
