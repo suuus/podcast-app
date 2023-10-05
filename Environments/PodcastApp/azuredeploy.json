@@ -28,7 +28,7 @@
         "name": "[variables('appServicePlanPortalName')]",
         "location": "eastus",
         "sku": {
-          "name": "F1"
+          "name": "S1"
         },
         "kind": "linux",
         "properties": {
