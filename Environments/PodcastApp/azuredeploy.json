@@ -53,7 +53,7 @@
         "publicNetworkAccess": "Enabled"
       },
       "dependsOn": [ 
-        "[resourceId('Microsoft.Web/serverfarms', pvariables('appServicePlanPortalName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
        ]
     }
   ]
