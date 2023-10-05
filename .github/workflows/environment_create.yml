@@ -71,6 +71,8 @@ jobs:
           echo "ENVIRONMENT_GROUP=$environment_group" >> $GITHUB_ENV
           echo "ENVIRONMENT_SUB=$environment_sub" >> $GITHUB_ENV
 
+          az webapp restart --name 'webapp-${{ env.ENVIRONMENT_NAME }}' --resource-group ${{ env.ENVIRONMENT_GROUP }}
+
           echo "- [View environment resources in the Azure portal](https://portal.azure.com/#@${{ vars.AZURE_TENANT_ID }}/resource$environment_rg)" >> $GITHUB_STEP_SUMMARY
 
       - name: Deploy Podcast App
