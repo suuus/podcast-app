@@ -29,7 +29,7 @@ resource "azurerm_service_plan" "service_plan" {
   name                = replace(var.resource_name, " ", "-")
   resource_group_name = data.azurerm_resource_group.rg.name
   location            = var.location
-  sku_name            = "P1v2"
+  sku_name            = "S1"
   os_type             = "Windows"
 }
 
