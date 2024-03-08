@@ -41,7 +41,7 @@
       "name": "[format('webApp-{0}-{1}', parameters('name'), uniqueString(resourceGroup().id))]",
       "location": "eastus",
       "properties": {
-        "name": "[format('webApp-{0}', parameters('name'))]",
+        "name": "[format('webApp-{0}-{1}', parameters('name'), uniqueString(resourceGroup().id))]",
         "siteConfig": {
           "linuxFxVersion": "DOTNETCORE|7.0",
           "alwaysOn": true
