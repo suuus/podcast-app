@@ -71,5 +71,7 @@ jobs:
       - id: get_config
         name: Set Outputs
         run: |
+          random=$(xxd -l 10 -c 10 -p < /dev/random)
+          ENVIRONMENT_NAME="$ENVIRONMENT_NAME-$random"
           echo "name=$ENVIRONMENT_NAME" >> $GITHUB_OUTPUT
           echo "type=$ENVIRONMENT_TYPE" >> $GITHUB_OUTPUT
