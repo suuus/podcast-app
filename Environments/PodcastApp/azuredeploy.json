@@ -38,10 +38,10 @@
     {
       "type": "Microsoft.Web/sites",
       "apiVersion": "2018-11-01",
-      "name": "[format('webApp-{0}-{1}', parameters('name'), uniqueString(resourceGroup().id))]",
+      "name": "[format('webApp-{0}', parameters('name'))]",
       "location": "eastus",
       "properties": {
-        "name": "[format('webApp-{0}-{1}', parameters('name'), uniqueString(resourceGroup().id))]",
+        "name": "[format('webApp-{0}', parameters('name'))]",
         "siteConfig": {
           "linuxFxVersion": "DOTNETCORE|7.0",
           "alwaysOn": true
