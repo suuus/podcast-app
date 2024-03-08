@@ -17,7 +17,7 @@ on:
 
 env:
   # format: ci-[branch|pr]-[branch name|pr number]-suffix
-  ENVIRONMENT_NAME: ci-${{ github.event_name == 'pull_request' && 'pr' || 'branch' }}-${{ github.event_name == 'pull_request' && github.event.number || github.event_name == 'push' && github.ref_name || github.event.ref }}-${{ github.event.repository.id }}
+  ENVIRONMENT_NAME: ci-${{ github.event_name == 'pull_request' && 'pr' || 'branch' }}-${{ github.event_name == 'pull_request' && github.event.number || github.event_name == 'push' && github.ref_name || github.event.ref }}
 
   # branch/Pull request | Environment Type
   # --------------------------------------
